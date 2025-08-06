@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 function RegisterForm() {
     const [name, setName] = React.useState('');
     const [email, setEmail] = React.useState('');
@@ -53,6 +54,18 @@ function RegisterForm() {
 
     return (
         <>
+            <div style={{ marginBottom: '20px' }}>
+                <Link to="/class" style={{
+                    padding: '8px 16px',
+                    backgroundColor: '#28a745',
+                    color: 'white',
+                    textDecoration: 'none',
+                    borderRadius: '4px',
+                    display: 'inline-block'
+                }}>
+                    Switch to Class Component
+                </Link>
+            </div>
             <h2>Register (Functional Component)</h2>
             <form onSubmit={handleSubmit}>
                 <label>Name: </label>

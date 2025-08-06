@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class RegisterFormClass extends Component {
     constructor(props) {
@@ -91,6 +92,18 @@ class RegisterFormClass extends Component {
 
         return (
             <>
+                <div style={{ marginBottom: '20px' }}>
+                    <Link to="/functional" style={{
+                        padding: '8px 16px',
+                        backgroundColor: '#007bff',
+                        color: 'white',
+                        textDecoration: 'none',
+                        borderRadius: '4px',
+                        display: 'inline-block'
+                    }}>
+                        Switch to Functional Component
+                    </Link>
+                </div>
                 <h2>Register (Class Component)</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label>Name: </label>
